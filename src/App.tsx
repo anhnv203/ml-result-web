@@ -4,9 +4,6 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { QueryParamProvider } from 'use-query-params';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from './services/graphql/ApoloClient';
-import awsconfig from './aws-exports';
-import Amplify from 'aws-amplify';
-Amplify.configure({ awsconfig });
 function App() {
     const apolloClient = useApollo();
     return (
