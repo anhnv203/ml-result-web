@@ -69,9 +69,14 @@ const ListOcrInstance = () => {
     };
     const columns = [
         {
-            title: 'ID',
-            dataIndex: 'paper_id',
-            key: 'paper_id',
+            title: 'S3 key',
+            dataIndex: 's3_params',
+            key: 's3_params',
+            render: (params: any) => (
+                <div>
+                    <h4>{params.key}</h4>
+                </div>
+            ),
         },
         {
             title: 'paperType',
